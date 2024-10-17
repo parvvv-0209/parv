@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Website </title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Times New Roman" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Times New Roman', sans-serif;
+    }
+    .navbar {
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      transition: background-color 0.5s ease;
+    }
+    h1{
+        background-color: black;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .navbar a:hover {
+      background-color: rgb(151, 148, 148);
+      color: black;
+    }
+    .navbar.transparent {
+      background: transparent;
+    }
+    .navbar.solid {
+      background: white;
+      color: black;
+    }
+    .navbar.solid a {
+      color: black;
+    }
+    .bgimg-1, .bgimg-2 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100%;
+    }
+    .bgimg-1 { background-image: url('https://www.w3schools.com/w3images/parallax1.jpg'); }
+    .bgimg-2 { background-image: url('https://www.w3schools.com/w3images/parallax2.jpg'); }
+  </style>
+</head>
+<body>
+
+  <div class="navbar transparent" id="navbar">
+    <a href="#home"><b>HOME</b></a>
+    <a href="#about"><b>ABOUT</b></a>
+    <a href="#portfolio"><b>PORTFOLIO</b></a>
+    <a href="#contact"><b>CONTACT</b></a>
+  </div>
+
+  <div class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-middle w3-center w3-text-white">
+      <h1>Welcome to My Website</h1>
+    </div>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h2 class="w3-center">About Me</h2>
+    <p class="w3-center">I love photography</p>
+
+      <p> We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div>
+    <img src="https://www.w3schools.com/w3images/avatar_hat.jpg">
+  </div>
+  <div class="bgimg-2 w3-display-container" id="portfolio">
+    <div class="w3-display-middle w3-center w3-text-white">
+      <h2>My Portfolio</h2>
+    </div>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h2 class="w3-center">Contact Me</h2>
+    <p class="w3-center">Some contact info here...</p>
+  </div>
+
+  <script>
+    window.onscroll = function() {
+      var navbar = document.getElementById("navbar");
+      if (window.pageYOffset > 100) {
+        navbar.classList.add("solid");
+        navbar.classList.remove("transparent");
+      } else {
+        navbar.classList.add("transparent");
+        navbar.classList.remove("solid");
+      }
+    };
+  </script>
+
+</body>
+</html>
